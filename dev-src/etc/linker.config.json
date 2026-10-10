@@ -1,0 +1,14 @@
+{
+	"provideLibs": [	
+		    "libdummy_headers_protobuf-x86_64-v2.so",
+		    "libdummy_headers_protobuf.so",
+		    "libdummy_pkgconfig_protobuf-x86_64-v2.so",
+		    "libdummy_pkgconfig_protobuf.so",
+		    "libdummy_protobuf_dev-x86_64-v2.so",
+		    "libdummy_protobuf_dev.so"
+	],
+	"requireLibs": [	
+		    "libdummy-protobuf.so"
+	],
+	"visible": true
+}

@@ -1,0 +1,6 @@
+shadow prebuilt repo: protobuf (target)
+  upstream: external/protobuf
+  api-level: 32 (branch 32-20261010)
+  blobs: org.blisslabs.ag.protobuf-14000001.apex org.blisslabs.ag.protobuf.dev-14000001.apex org.blisslabs.ag.protobuf.doc-14000001.apex 
+  dev-src: extracted dev payload + regenerated root Android.bp (gen_extractive_bp.py)
+  date: 2026-10-10
