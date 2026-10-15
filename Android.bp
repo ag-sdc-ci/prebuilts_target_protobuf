@@ -5,53 +5,157 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
+prebuilt_apex {
+    name: "org.blisslabs.ag.protobuf",
+    apex_name: "org.blisslabs.ag.protobuf",
+    source_apex_name: "org.blisslabs.ag.protobuf",
+    arch: {
+        x86_64: {
+            src: "org.blisslabs.ag.protobuf-14000001.apex",
+        },
+    },
+    filename: "org.blisslabs.ag.protobuf-14000001.apex",
+    prefer: true,
+    installable: true,
+}
+
 cc_prebuilt_library_shared {
-    name: "libdummy_protobuf_dev",
+    name: "libprotobuf-cpp-full",
     vendor_available: true,
     product_available: true,
     recovery_available: true,
     host_supported: true,
     check_elf_files: false,
-    arch: {
-        x86_64: {
-            srcs: [
-                "dev-src/lib/_libdummy.so",
-            ],
-        },
-    },
+    export_include_dirs: [
+        "dev-src/include",
+    ],
     prefer: true,
     apex_available: [
-        "//apex_available:platform",
         "//apex_available:anyapex",
+        "//apex_available:platform",
     ],
     min_sdk_version: "29",
+    vendor_available: true,
+    product_available: true,
+    srcs: ["src/lib/libprotobuf.so"],
 }
 
-cc_library_headers {
-    name: "google_headers",
+cc_prebuilt_library_shared {
+    name: "libprotobuf-cpp-lite",
     vendor_available: true,
     product_available: true,
     recovery_available: true,
     host_supported: true,
+    check_elf_files: false,
+    export_include_dirs: [
+        "dev-src/include",
+    ],
+    prefer: true,
     apex_available: [
         "//apex_available:anyapex",
         "//apex_available:platform",
     ],
-    export_include_dirs: [
-        "dev-src/include/google/protobuf",
-        "dev-src/include/google/protobuf/compiler",
-        "dev-src/include/google/protobuf/compiler/cpp",
-        "dev-src/include/google/protobuf/compiler/csharp",
-        "dev-src/include/google/protobuf/compiler/java",
-        "dev-src/include/google/protobuf/compiler/objectivec",
-        "dev-src/include/google/protobuf/compiler/php",
-        "dev-src/include/google/protobuf/compiler/python",
-        "dev-src/include/google/protobuf/compiler/ruby",
-        "dev-src/include/google/protobuf/io",
-        "dev-src/include/google/protobuf/stubs",
-        "dev-src/include/google/protobuf/util",
-    ],
     min_sdk_version: "29",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    srcs: ["src/lib/libprotobuf-lite.so"],
 }
 
+cc_prebuilt_library_shared {
+    name: "libprotoc",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    host_supported: true,
+    check_elf_files: false,
+    export_include_dirs: [
+        "dev-src/include",
+    ],
+    prefer: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+    min_sdk_version: "29",
+    srcs: ["src/lib/libprotoc.so"],
+}
 
+cc_prebuilt_library_shared {
+    name: "libprotobuf",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    host_supported: true,
+    check_elf_files: false,
+    export_include_dirs: [
+        "dev-src/include",
+    ],
+    prefer: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+    min_sdk_version: "29",
+    srcs: ["src/lib/libprotobuf.so"],
+}
+
+cc_prebuilt_library_shared {
+    name: "libprotobuf-lite",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    host_supported: true,
+    check_elf_files: false,
+    export_include_dirs: [
+        "dev-src/include",
+    ],
+    prefer: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+    min_sdk_version: "29",
+    srcs: ["src/lib/libprotobuf-lite.so"],
+}
+
+java_import {
+    name: "libprotobuf-java-full",
+    jars: [
+        "src/share/libprotobuf-java-full/protobuf-java-3.25.3.jar",
+    ],
+    host_supported: true,
+    prefer: true,
+}
+
+java_import {
+    name: "libprotobuf-java-lite",
+    jars: [
+        "src/share/libprotobuf-java-lite/protobuf-javalite-3.25.3.jar",
+    ],
+    host_supported: true,
+    prefer: true,
+}
+
+java_import {
+    name: "libprotobuf-java-nano",
+    jars: [
+        "src/share/libprotobuf-java-nano/protobuf-java-3.25.3.jar",
+    ],
+    host_supported: true,
+    prefer: true,
+}
+
+cc_prebuilt_binary {
+    name: "aprotoc",
+    check_elf_files: false,
+    prefer: true,
+    srcs: ["src/bin/protoc"],
+}
+
+cc_prebuilt_binary {
+    name: "protoc-3.21.12.0",
+    check_elf_files: false,
+    prefer: true,
+    srcs: ["src/bin/protoc-3.21.12.0"],
+}
