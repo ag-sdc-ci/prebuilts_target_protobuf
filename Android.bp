@@ -152,6 +152,7 @@ java_import {
 
 cc_prebuilt_binary {
     name: "aprotoc",
+    host_supported: true,
     check_elf_files: false,
     prefer: true,
     srcs: ["src/bin/protoc"],
