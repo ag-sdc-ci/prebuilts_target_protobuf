@@ -35,8 +35,6 @@ cc_prebuilt_library_shared {
         "//apex_available:platform",
     ],
     min_sdk_version: "29",
-    vendor_available: true,
-    product_available: true,
     srcs: ["src/lib/libprotobuf.so"],
 }
 
@@ -56,9 +54,6 @@ cc_prebuilt_library_shared {
         "//apex_available:platform",
     ],
     min_sdk_version: "29",
-    vendor_available: true,
-    product_available: true,
-    recovery_available: true,
     srcs: ["src/lib/libprotobuf-lite.so"],
 }
 
