@@ -141,6 +141,15 @@ java_import {
     prefer: true,
 }
 
+java_import {
+    name: "libprotobuf-java-util-full",
+    jars: [
+        "src/share/libprotobuf-java-full/protobuf-java-3.25.3.jar",
+    ],
+    host_supported: true,
+    prefer: true,
+}
+
 cc_prebuilt_binary {
     name: "aprotoc",
     check_elf_files: false,
