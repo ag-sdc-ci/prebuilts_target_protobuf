@@ -294,7 +294,14 @@ cc_library_host_static {
     name: "libabsl_host",
 }
 
+cc_library {
+    name: "libabsl",
+    host_supported: true,
+    vendor_available: true,
+}
+
 cc_library_host_static {
     name: "libcap",
 }
+
 
