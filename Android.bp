@@ -350,8 +350,11 @@ cc_library_static {
     recovery_available: true,
 }
 
-cc_library_host_static {
+cc_library {
     name: "libgflags",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
 }
 
 cc_library_headers {
@@ -425,6 +428,29 @@ cc_library {
     vendor_available: true,
     export_include_dirs: ["dev-src/include"],
 }
+
+cc_library {
+    name: "libvixl",
+    host_supported: true,
+    vendor_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library {
+    name: "libvixld",
+    host_supported: true,
+    vendor_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    export_include_dirs: ["dev-src/include"],
+}
+
 
 
 
