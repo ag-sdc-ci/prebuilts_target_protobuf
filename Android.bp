@@ -172,3 +172,129 @@ cc_prebuilt_binary {
     prefer: true,
     srcs: ["src/bin/protoc-3.21.12.0"],
 }
+
+java_defaults {
+    name: "cts_defaults",
+}
+
+java_defaults {
+    name: "mts-target-sdk-version-current",
+}
+
+java_defaults {
+    name: "cts_support_defaults",
+}
+
+rust_defaults {
+    name: "rdroidtest.defaults",
+}
+
+java_library_host {
+    name: "cts-tradefed",
+}
+
+java_library_host {
+    name: "cts-install-lib-host",
+}
+
+java_library_host {
+    name: "cts-statsd-atom-host-test-utils",
+}
+
+java_library_host {
+    name: "jsonlib",
+}
+
+java_library_host {
+    name: "json",
+}
+
+java_library_host {
+    name: "vogarexpectlib",
+}
+
+java_library_host {
+    name: "platform-test-annotations",
+}
+
+java_defaults {
+    name: "tradefed_errorprone_defaults",
+}
+
+java_api_contribution {
+    name: "framework-profiling.stubs.source.api.contribution",
+    api_surface: "public",
+    api_file: "api/framework-profiling.txt",
+    visibility: ["//visibility:public"],
+}
+
+java_api_contribution {
+    name: "framework-profiling.stubs.source.system.api.contribution",
+    api_surface: "system",
+    api_file: "api/framework-profiling.txt",
+    visibility: ["//visibility:public"],
+}
+
+java_api_contribution {
+    name: "framework-profiling.stubs.source.module_lib.api.contribution",
+    api_surface: "module-lib",
+    api_file: "api/framework-profiling.txt",
+    visibility: ["//visibility:public"],
+}
+
+java_library_host {
+    name: "car-cts-host-util",
+}
+
+java_library_host {
+    name: "cts-shim-host-lib",
+}
+
+cc_library_headers {
+    name: "libeigen",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library_headers {
+    name: "tensorflow_headers",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library_headers {
+    name: "pybind11_headers",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library {
+    name: "slicer",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library_static {
+    name: "slicer_ndk_no_rtti",
+    host_supported: true,
+    vendor_available: true,
+    sdk_version: "current",
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library_host_shared {
+    name: "sandboxed_api_sandbox2",
+}
+
+cc_library_host_static {
+    name: "libabsl_host",
+}
+
+cc_library_host_static {
+    name: "libcap",
+}
+
