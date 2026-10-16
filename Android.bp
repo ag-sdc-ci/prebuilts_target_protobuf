@@ -304,4 +304,37 @@ cc_library_host_static {
     name: "libcap",
 }
 
+cc_binary_host {
+    name: "hwtrust",
+}
+
+cc_library_static {
+    name: "slicer_no_rtti",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library {
+    name: "libtinyalsav2",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library_headers {
+    name: "libwebrtc_absl_headers",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library {
+    name: "webrtc_audio_processing",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+
 
