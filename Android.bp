@@ -123,6 +123,14 @@ java_import {
     prefer: true,
 }
 
+java_import_host {
+    name: "host-libprotobuf-java-full",
+    jars: [
+        "src/share/libprotobuf-java-full/protobuf-java-3.25.3.jar",
+    ],
+    prefer: true,
+}
+
 java_import {
     name: "libprotobuf-java-lite",
     jars: [
