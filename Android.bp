@@ -336,5 +336,96 @@ cc_library {
     export_include_dirs: ["dev-src/include"],
 }
 
+cc_library {
+    name: "libFLAC",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library_static {
+    name: "libkver",
+    host_supported: true,
+    vendor_available: true,
+    recovery_available: true,
+}
+
+cc_library_host_static {
+    name: "libgflags",
+}
+
+cc_library_headers {
+    name: "dlmalloc",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library_headers {
+    name: "javavm_headers",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library_host_static {
+    name: "libwayland_crosvm_gpu_display_extension_server_protocols",
+}
+
+cc_library {
+    name: "libssl_fuzz_unsafe",
+    host_supported: true,
+    vendor_available: true,
+}
+
+cc_library {
+    name: "libcrypto_fuzz_unsafe",
+    host_supported: true,
+    vendor_available: true,
+}
+
+cc_library {
+    name: "libdng_sdk",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library {
+    name: "libwebp-decode",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library {
+    name: "libwebp-encode",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library {
+    name: "libsfntly",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library {
+    name: "libwuffs_mirror_release_c",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library {
+    name: "libpiex",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+
 
 
