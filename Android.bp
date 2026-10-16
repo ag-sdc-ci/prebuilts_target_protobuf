@@ -213,8 +213,14 @@ java_library_host {
     name: "vogarexpectlib",
 }
 
-java_library_host {
+java_library {
     name: "platform-test-annotations",
+    host_supported: true,
+}
+
+java_library {
+    name: "flag-junit",
+    host_supported: true,
 }
 
 java_defaults {
@@ -450,6 +456,50 @@ cc_library {
     ],
     export_include_dirs: ["dev-src/include"],
 }
+
+cc_library_headers {
+    name: "libdynamic_depth-internal_headers",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library_headers {
+    name: "libdynamic_depth-public_headers",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library {
+    name: "libdynamic_depth",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library {
+    name: "libexif",
+    host_supported: true,
+    vendor_available: true,
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library_host_static {
+    name: "libmdnssd",
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library_host_static {
+    name: "libopenscreen-discovery",
+    export_include_dirs: ["dev-src/include"],
+}
+
+cc_library_host_static {
+    name: "libopenscreen-platform-impl",
+    export_include_dirs: ["dev-src/include"],
+}
+
 
 
 
