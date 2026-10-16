@@ -500,6 +500,52 @@ cc_library_host_static {
     export_include_dirs: ["dev-src/include"],
 }
 
+python_library {
+    name: "libprotobuf-python",
+    host_supported: true,
+}
+
+python_library {
+    name: "mobly",
+    host_supported: true,
+}
+
+python_library {
+    name: "mako",
+    host_supported: true,
+}
+
+python_library {
+    name: "pandora-python",
+    host_supported: true,
+}
+
+python_library {
+    name: "typing_extensions",
+    host_supported: true,
+}
+
+python_library {
+    name: "pyfakefs",
+    host_supported: true,
+}
+
+python_library {
+    name: "EddParser.py",
+    host_supported: true,
+}
+
+python_library {
+    name: "hostConfig.py",
+    host_supported: true,
+}
+
+python_library {
+    name: "PFWScriptGenerator.py",
+    host_supported: true,
+}
+
+
 
 
 
