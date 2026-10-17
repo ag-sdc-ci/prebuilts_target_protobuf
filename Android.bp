@@ -150,6 +150,15 @@ java_import {
 }
 
 java_import {
+    name: "libprotobuf-java-micro",
+    jars: [
+        "src/share/libprotobuf-java-nano/protobuf-java-3.25.3.jar",
+    ],
+    host_supported: true,
+    prefer: true,
+}
+
+java_import {
     name: "libprotobuf-java-util-full",
     jars: [
         "src/share/libprotobuf-java-full/protobuf-java-3.25.3.jar",
@@ -176,4 +185,16 @@ cc_prebuilt_binary {
 python_library {
     name: "libprotobuf-python",
     host_supported: true,
+}
+
+cc_library_static {
+    name: "libprotobuf-cpp-lite-ndk",
+    sdk_version: "9",
+    stl: "c++_static",
+    export_include_dirs: ["dev-src/include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    min_sdk_version: "30",
 }
